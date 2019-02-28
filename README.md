@@ -74,3 +74,7 @@ Disable the attach files permission
 Bugs
 ----
 No Bugs have been found!
+
+Discord
+-------
+https://discord.gg/s22GZ5R

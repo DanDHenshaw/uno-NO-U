@@ -78,3 +78,7 @@ No Bugs have been found!
 Discord
 -------
 https://discord.gg/s22GZ5R
+
+Donate
+------
+https://www.paypal.me/DHenshaw

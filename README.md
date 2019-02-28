@@ -81,4 +81,8 @@ https://discord.gg/s22GZ5R
 
 Donate
 ------
+Help me reach my goals and develop my dreams by donating. :)
+
+The money will be used for PC hardware, programs and courses to develop my knowledge of coding.
+
 https://www.paypal.me/DHenshaw

@@ -1,6 +1,6 @@
 No U
 ==========
-Project source can be downloaded from https://github.com/YoGamingHenshaw/nou.git
+Project source can be downloaded from https://github.com/YoGamingHenshaw/uno-NO-U/.git
 --------------------------------------------------------------------------------
 What does the `No U` bot do?
 ----------------------------

@@ -34,6 +34,8 @@ package.json
 start.bat
 
 token.json
+
+README.md
 ```
 ```
 ./images

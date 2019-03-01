@@ -31,7 +31,7 @@ bot.on('message', async message => {
   }
   
   if(message.content.toLowerCase() === "no u")
-    message.channel.send("No U") return;
+    message.reply("**No U**") return;
   
 })
 

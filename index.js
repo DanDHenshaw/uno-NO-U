@@ -7,6 +7,7 @@ bot.on("ready", async () => {
   console.log("Servers:");
   bot.guilds.forEach((guild) => {
     console.log(` - Name: ${guild.name} ID: ${guild.id}`)
+  })
   bot.user.setActivity("UNO", {type: "PLAYING"});
 })
 

@@ -4,6 +4,9 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  console.log("Servers:");
+  bot.guilds.forEach((guild) => {
+    console.log(` - Name: ${guild.name} ID: ${guild.id}`)
   bot.user.setActivity("UNO", {type: "PLAYING"});
 })
 

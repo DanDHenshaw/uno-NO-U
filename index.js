@@ -20,7 +20,7 @@ bot.on('message', async message => {
   let foundInText1 = false;
   let foundInText2 = false;
   for (var i in insults){
-    if(message.content.toLowerCase().includes(insults[i].toLowerCase())) foundInText1 = true;
+    if(message.content.toLowerCase().includes(insults[i].toLowerCase()) && message.mentions.members.first()) foundInText1 = true;
   }
   if(foundInText1){
     let ranNum = Math.floor(Math.random() * 4) + 1;
@@ -39,7 +39,7 @@ bot.on('message', async message => {
   }
   
   for (var i in racism){
-    if(message.content.toLowerCase().includes(racism[i].toLowerCase())) foundInText2 = true;
+    if(message.content.toLowerCase().includes(racism[i].toLowerCase()) && message.mentions.members.first()) foundInText2 = true;
   }
   if(foundInText2){
     message.channel.send({files: ["./images/black.png"]});

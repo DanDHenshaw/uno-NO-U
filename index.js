@@ -3,11 +3,14 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
+  var members = 0
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   console.log("Servers:");
   bot.guilds.forEach((guild) => {
-    console.log(` - Name: ${guild.name} ID: ${guild.id}`)
+    console.log(` - Name: ${guild.name} ID: ${guild.id} Members: ${guild.members.filter(member => !member.user.bot).size}`)
+    members += guild.members.filter(member => !member.user.bot).size
   })
+  console.log(`Total Members: ${members}`);
   bot.user.setActivity("UNO", {type: "PLAYING"});
 })
 

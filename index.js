@@ -12,7 +12,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('ready', () => {
 	var members = 0
-	console.log(`${bot.user.username} is online on ${client.guilds.cache.size} servers!`);
+	console.log(`${bot.user.username} is online on ${bot.guilds.cache.size} servers!`);
 	bot.guilds.cache.forEach(guild =>{
 		console.log(` - Name: ${guild.name} ID: ${guild.id} Members: ${guild.members.cache.filter(member => !member.user.bot).size}`)
 		members += guild.members.cache.filter(member => !member.user.bot).size;

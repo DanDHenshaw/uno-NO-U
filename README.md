@@ -1,10 +1,10 @@
 No U
 ==========
-Project source can be downloaded from https://github.com/YoGamingHenshaw/uno-NO-U/.git
+Project source can be downloaded from https://github.com/DanDHenshaw/nou
 --------------------------------------------------------------------------------
 What does the `No U` bot do?
 ----------------------------
-When this bot is added to your server it checks every messages sent against a list of over 200 insult words.
+When this bot is added to your server it checks every messages including an @mention against PerspectiveAPI (https://www.perspectiveapi.com/)
 
 If the word is included in the message a user sends the bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
 
@@ -70,19 +70,3 @@ Go to the channel settings
 Add the bots role to the permissions 
  
 Disable the attach files permission
-
-Bugs
-----
-No Bugs have been found!
-
-Discord
--------
-https://discord.gg/s22GZ5R
-
-Donate
-------
-Help me reach my goals and develop my dreams by donating. :)
-
-The money will be used for PC hardware, programs and courses to develop my knowledge of coding.
-
-https://www.paypal.me/DHenshaw

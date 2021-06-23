@@ -6,7 +6,7 @@ What does the `No U` bot do?
 ----------------------------
 When this bot is added to your server it checks every message including an @mention against PerspectiveAPI (https://www.perspectiveapi.com/)
 
-IF the API rates the messages toxicity 80%+ he bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
+If the API rates the messages toxicity 80%+ he bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
 
 This card will be sent to the channel the message was received in.
 

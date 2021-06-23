@@ -4,7 +4,7 @@ Project source can be downloaded from https://github.com/DanDHenshaw/nou
 --------------------------------------------------------------------------------
 What does the `No U` bot do?
 ----------------------------
-When this bot is added to your server it checks every messages including an @mention against PerspectiveAPI (https://www.perspectiveapi.com/)
+When this bot is added to your server it checks every message including an @mention against PerspectiveAPI (https://www.perspectiveapi.com/)
 
 IF the API rates the messages toxicity 80%+ he bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
 

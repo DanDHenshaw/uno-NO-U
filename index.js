@@ -1,72 +1,68 @@
-No U
-==========
-Project source can be downloaded from https://github.com/DanDHenshaw/nou
---------------------------------------------------------------------------------
-What does the `No U` bot do?
-----------------------------
-When this bot is added to your server it checks every message including an @mention against PerspectiveAPI (https://www.perspectiveapi.com/)
+const { config } = require('dotenv');
+config({
+    path: __dirname + "/.env"
+});
 
-If the API rates the messages toxicity 80%+ he bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
+const ms = require('ms');
 
-This card will be sent to the channel the message was received in.
+const Discord = require('discord.js');
+const bot = new Discord.Client({disableEveryone: true});
 
-Author & Contributor List
--------------------------
-**Daniel Henshaw**
+const Perspective = require('perspective-api-client');
 
-All other known bugs and fixes can be sent to our discord server (https://discord.gg/ZDEjBMSTNu).
- 
-Reported bugs/fixes will be submitted to correction.
+bot.login(process.env.TOKEN);
 
-File List
-----------
-```
-.:
+bot.on('ready', () => {
+	var members = 0
+	console.log(`${bot.user.username} is online on ${bot.guilds.cache.size} servers!`);
+	bot.guilds.cache.forEach(guild =>{
+		console.log(` - Name: ${guild.name} ID: ${guild.id} Members: ${guild.members.cache.filter(member => !member.user.bot).size}`)
+		members += guild.members.cache.filter(member => !member.user.bot).size;
+	})
+	console.log(`Total Members: ${members}`);
+	bot.user.setActivity('UNO', {type: "PLAYING"});
+	
+    let statuses = [`in ${bot.guilds.cache.size} servers!`, 'UNO']
+	
+	setInterval(function(){
+		let status = statuses[Math.floor(Math.random() * statuses.length)];
+		bot.user.setActivity(status, {type: "PLAYING"});
+	}, 5000);
+})
 
-.gitignore
+bot.on('message', async message => {
+    if(message.author.bot) return;
 
-Procfile
+    if (message.mentions.members.first()) {
+        const perspective = new Perspective({ apiKey: process.env.API });
+        const result = await perspective.analyze(message.content);
+        let obj = JSON.parse(JSON.stringify(result));
+        console.log(JSON.stringify(result));
+        console.log(obj.attributeScores.TOXICITY.summaryScore.value * 100);
 
-index.js
+        if (obj.attributeScores.TOXICITY.summaryScore.value * 100 > 80) {
+            let ranNum = Math.floor(Math.random() * 4) + 1;
+            if (ranNum == 1) {
+                message.channel.send({ files: ["./images/blue.png"] });
+            };
+            if (ranNum == 2) {
+                message.channel.send({ files: ["./images/green.png"] });
+            };
+            if (ranNum == 3) {
+                message.channel.send({ files: ["./images/yellow.jpg"] });
+            };
+            if (ranNum == 4) {
+                message.channel.send({ files: ["./images/red.png"] });
+            };
+        }
+    };
 
-package.json
+    if(message.content.toLowerCase() === "?ping")
+    	message.channel.send(`🏓 Pinging...`).then((msg) => msg.edit(`🏓 Pong\nLatency is ${Math.floor(msg.createdAt - message.createdAt)}ms`))
 
-start.bat
+    if(message.content.toLowerCase() === "no u" || message.content.toLowerCase() === "no you" || message.content.toLowerCase() === "nou")
+        message.reply("**No U**");
 
-token.json
-
-README.md
-```
-```
-./images
-
-NoU-pp.png
-
-blue.png
-
-green.png
-
-red.png
-
-yellow.jpg
-```
-
-How to use the bot on your server
----------------------------------
-
-Invite the bot to your server using the following link: 
-
-https://discordapp.com/api/oauth2/authorize?client_id=549991531369594900&permissions=8&scope=bot
-
-The bot should work automatically.
-
-How to disable the bot in certain channels
-------------------------------------------
-
-If you would like to disable the bot in specific channels follow the steps bellow:
-
-Go to the channel settings
-
-Add the bots role to the permissions 
- 
-Disable the attach files permission
+    if(message.content.toLowerCase() === "no me")
+        message.reply("**Yes U**");
+})

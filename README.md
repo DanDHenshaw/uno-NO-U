@@ -1,6 +1,6 @@
 No U
 ==========
-Project source can be downloaded from https://github.com/DanDHenshaw/nou
+Project source can be downloaded from https://github.com/DanDHenshaw/uno-NO-U
 --------------------------------------------------------------------------------
 What does the `No U` bot do?
 ----------------------------
@@ -65,7 +65,7 @@ How to use the bot on your server
 
 Invite the bot to your server using the following link: 
 
-https://discordapp.com/api/oauth2/authorize?client_id=549991531369594900&permissions=8&scope=bot
+https://discord.com/oauth2/authorize?client_id=549991531369594900&permissions=412318292032&scope=bot%20applications.commands
 
 The bot should work automatically.
 

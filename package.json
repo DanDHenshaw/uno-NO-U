@@ -1,17 +1,26 @@
 {
   "name": "nou",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.6.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "nodemon index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Henshaw",
+  "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^12.3.1",
-    "dotenv": "^8.2.0",
-    "ms": "^2.1.2",
-    "perspective-api-client": "^3.1.0"
+    "api-townlist-xyz": "^1.0.0",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "ms": "^2.1.3",
+    "perspective-api-client": "^3.1.0",
+    "wokcommands": "^1.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }

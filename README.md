@@ -23,6 +23,10 @@ File List
 ```
 .:
 
+README.md
+
+LICENSE
+
 .gitignore
 
 Procfile
@@ -34,10 +38,6 @@ package.json
 start.bat
 
 .env
-
-README.md
-
-LICENSE
 ```
 ```
 ./commands

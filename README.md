@@ -33,9 +33,11 @@ package.json
 
 start.bat
 
-token.json
+.env
 
 README.md
+
+LICENSE
 ```
 ```
 ./images

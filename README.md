@@ -40,6 +40,13 @@ README.md
 LICENSE
 ```
 ```
+./commands
+
+ping.png
+
+vote.png
+```
+```
 ./images
 
 NoU-pp.png

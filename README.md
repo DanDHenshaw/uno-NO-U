@@ -14,7 +14,7 @@ Author & Contributor List
 -------------------------
 **Daniel Henshaw**
 
-All other known bugs and fixes can be sent to me via discord. <b>Dan();#3662</b>
+All other known bugs and fixes can be sent to me via discord. <b><a href='https://discordapp.com/users/143085134122450944'>Dan();#3662</a></b>
 
 Reported bugs/fixes will be submitted to correction.
 

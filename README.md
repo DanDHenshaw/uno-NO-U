@@ -6,7 +6,7 @@ What does the `No U` bot do?
 ----------------------------
 When this bot is added to your server it checks every message including an @mention against PerspectiveAPI (https://www.perspectiveapi.com/)
 
-If the API rates the messages toxicity 80%+ he bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
+If the API rates the messages toxicity 80%+ the bot will randomly choose between 4 reverse cards (red, yellow, green, and blue)
 
 This card will be sent to the channel the message was received in.
 
@@ -60,6 +60,11 @@ red.png
 yellow.jpg
 ```
 
+Commands
+---------------------------------
+
+No U mainly uses slash commands. However, if you would like to use a text command then you can use the `?help` commands to view a list of commands.
+
 How to use the bot on your server
 ---------------------------------
 
@@ -78,4 +83,4 @@ Go to the channel settings
 
 Add the bots role to the permissions 
  
-Disable the attach files permission
+Disable the `attach files` permission

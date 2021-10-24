@@ -1,4 +1,4 @@
-var main = require('../index')
+var main = require('../../index')
 var client = main.client;
 
 module.exports = {

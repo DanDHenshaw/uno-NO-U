@@ -77,7 +77,7 @@ The bot should work automatically.
 How to disable the bot in certain channels
 ------------------------------------------
 
-If you would like to disable the bot in specific channels follow the steps bellow:
+If you would like to disable the bot in specific channels follow the steps below:
 
 Go to the channel settings
 

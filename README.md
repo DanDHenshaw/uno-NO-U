@@ -35,16 +35,28 @@ index.js
 
 package.json
 
-start.bat
-
 .env
 ```
 ```
-./commands
+./commands/Miscellaneous
 
-ping.png
+ping.js
 
-vote.png
+vote.js
+```
+```
+./features/Start
+
+consolelog.js
+
+status.js
+```
+```
+./features/MessageReplies
+
+reply.js
+
+reverse.js
 ```
 ```
 ./images
